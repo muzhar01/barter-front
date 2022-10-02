@@ -9,8 +9,8 @@ import { Row } from "./Row";
 import { Stack } from "./Stack";
 import { Text } from "./Text";
 import { Button } from "./Button";
-import { PagerIndicator } from "./PagerIndicator";
 import { Slider } from "./Slider";
+import { PagerIndicator } from "./PagerIndicator";
 import { RatingBar } from "./RatingBar";
 import { CheckBox } from "./CheckBox";
 import { SelectBox } from "./SelectBox";
@@ -26,8 +26,8 @@ export {
   Stack,
   Text,
   Button,
-  PagerIndicator,
   Slider,
+  PagerIndicator,
   RatingBar,
   CheckBox,
   SelectBox,

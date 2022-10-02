@@ -1,14 +1,15 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
 import {
   Column,
   Row,
   Text,
   Img,
-  Button,
   PagerIndicator,
   Line,
   Slider,
+  Button,
   Grid,
   Stack,
   List,
@@ -16,6 +17,12 @@ import {
 } from "components";
 
 const Home1Page = () => {
+  const navigate = useNavigate();
+
+  function handleNavigate1() {
+    navigate("/categorieswithsidebar");
+  }
+
   const sliderRef = React.useRef();
   const [sliderState, setsliderState] = React.useState(0);
 
@@ -25,7 +32,10 @@ const Home1Page = () => {
         <header className="w-[100%]">
           <Column className="items-center 3xl:pb-[107px] lg:pb-[69px] xl:pb-[79px] 2xl:pb-[89px] w-[100%]">
             <Row className="bg-white_A700 items-center lg:p-[19px] xl:p-[22px] 2xl:p-[24px] 3xl:p-[29px] w-[100%]">
-              <Text className="cursor-pointer hover:font-bold font-normal lg:ml-[64px] xl:ml-[73px] 2xl:ml-[82px] 3xl:ml-[99px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-gray_800 w-[auto]">
+              <Text
+                className="common-pointer cursor-pointer hover:font-bold font-normal lg:ml-[64px] xl:ml-[73px] 2xl:ml-[82px] 3xl:ml-[99px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-gray_800 w-[auto]"
+                onClick={handleNavigate1}
+              >
                 Categories
               </Text>
               <Text className="cursor-pointer hover:font-bold font-normal lg:ml-[32px] xl:ml-[37px] 2xl:ml-[42px] 3xl:ml-[50px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-gray_800 w-[auto]">
@@ -45,7 +55,11 @@ const Home1Page = () => {
               <Text className="cursor-pointer hover:font-bold font-bold lg:ml-[4px] xl:ml-[5px] 2xl:ml-[6px] 3xl:ml-[7px] mt-[3px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] text-gray_800 w-[auto]">
                 Elliye{" "}
               </Text>
-              <Button className="lg:ml-[347px] xl:ml-[396px] 2xl:ml-[446px] 3xl:ml-[535px] text-center w-[9%]"></Button>
+              <Img
+                src="images/img_icon.svg"
+                className="lg:h-[12px] xl:h-[13px] 2xl:h-[15px] 3xl:h-[18px] lg:ml-[347px] xl:ml-[396px] 2xl:ml-[446px] 3xl:ml-[535px] w-[9%]"
+                alt="icon"
+              />
             </Row>
             <PagerIndicator
               className="bg-white_A700 h-[120px] lg:mx-[2px] 2xl:mx-[3px] xl:mx-[3px] 3xl:mx-[4px] lg:px-[187px] xl:px-[214px] 2xl:px-[241px] 3xl:px-[289px] w-[max-content]"
@@ -77,7 +91,6 @@ const Home1Page = () => {
                 <Column className="bg-white_A700_82 xl:p-[104px] 2xl:p-[117px] 3xl:p-[141px] lg:p-[91px] w-[100%]">
                   <Button
                     className="font-medium font-poppins 3xl:ml-[113px] lg:ml-[73px] xl:ml-[84px] 2xl:ml-[94px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] text-center w-[17%]"
-                    size="sm"
                     variant="FillWhiteA700"
                   >
                     50% Off Limited Offer
@@ -123,7 +136,7 @@ const Home1Page = () => {
           <Grid className="lg:gap-[18px] xl:gap-[21px] 2xl:gap-[24px] 3xl:gap-[28px] grid grid-cols-2 w-[32%]">
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_rectangle39.png"
+                src="images/img_rectangle39_5.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="RectangleThirtyNine"
               />
@@ -137,7 +150,7 @@ const Home1Page = () => {
             </Column>
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_rectangle39_245X245.png"
+                src="images/img_rectangle39_6.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="RectangleThirtyNine One"
               />
@@ -152,7 +165,7 @@ const Home1Page = () => {
             </Column>
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_placeholder.png"
+                src="images/img_placeholder_5.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="placeholder"
               />
@@ -166,7 +179,7 @@ const Home1Page = () => {
             </Column>
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_placeholder_245X245.png"
+                src="images/img_placeholder_2.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="placeholder One"
               />
@@ -195,8 +208,7 @@ const Home1Page = () => {
             </Text>
             <Button
               className="font-bold lg:mt-[32px] xl:mt-[37px] 2xl:mt-[42px] 3xl:mt-[50px] lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-center w-[38%]"
-              size="md"
-              variant="FillGray800"
+              size="lg"
             >
               Add to Cart
             </Button>
@@ -204,7 +216,7 @@ const Home1Page = () => {
           <Grid className="lg:gap-[18px] xl:gap-[21px] 2xl:gap-[24px] 3xl:gap-[28px] grid grid-cols-2 lg:ml-[19px] xl:ml-[22px] 2xl:ml-[24px] 3xl:ml-[29px] w-[32%]">
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_rectangle39_1.png"
+                src="images/img_rectangle39_7.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="RectangleThirtyNine Two"
               />
@@ -218,7 +230,7 @@ const Home1Page = () => {
             </Column>
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_rectangle39_2.png"
+                src="images/img_rectangle39_8.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="RectangleThirtyNine Three"
               />
@@ -232,7 +244,7 @@ const Home1Page = () => {
             </Column>
             <Column className="pb-[4px] w-[100%]">
               <Img
-                src="images/img_placeholder_1.png"
+                src="images/img_placeholder_245X245.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="placeholder Three"
               />
@@ -247,7 +259,7 @@ const Home1Page = () => {
             </Column>
             <Column className="pb-[4px] w-[100%]">
               <Img
-                src="images/img_placeholder_2.png"
+                src="images/img_placeholder_1.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="placeholder Four"
               />
@@ -277,7 +289,7 @@ const Home1Page = () => {
                 className="lg:gap-[15px] xl:gap-[17px] 2xl:gap-[19px] 3xl:gap-[23px] grid grid-cols-2 min-h-[auto] w-[49%]"
                 orientation="horizontal"
               >
-                <Column className="bg-white_A700 items-center lg:p-[21px] xl:p-[24px] 2xl:p-[27px] 3xl:p-[33px] shadow-bs w-[100%]">
+                <Column className="bg-white_A700 items-center lg:p-[21px] xl:p-[24px] 2xl:p-[27px] 3xl:p-[33px] shadow-bs2 w-[100%]">
                   <Img
                     src="images/img_blackbusiness.png"
                     className="lg:h-[117px] xl:h-[134px] 2xl:h-[151px] 3xl:h-[181px] lg:w-[116px] xl:w-[133px] 2xl:w-[150px] 3xl:w-[180px]"
@@ -290,9 +302,9 @@ const Home1Page = () => {
                     $299
                   </Text>
                 </Column>
-                <Column className="bg-white_A700 items-center lg:p-[21px] xl:p-[24px] 2xl:p-[27px] 3xl:p-[33px] shadow-bs w-[100%]">
+                <Column className="bg-white_A700 items-center lg:p-[21px] xl:p-[24px] 2xl:p-[27px] 3xl:p-[33px] shadow-bs2 w-[100%]">
                   <Img
-                    src="images/img_pink3tz3pbb1.png"
+                    src="images/img_placeholder.png"
                     className="lg:h-[117px] xl:h-[134px] 2xl:h-[151px] 3xl:h-[181px] lg:w-[116px] xl:w-[133px] 2xl:w-[150px] 3xl:w-[180px]"
                     alt="pink3TZ3PBBOne"
                   />
@@ -308,9 +320,9 @@ const Home1Page = () => {
                 className="lg:gap-[15px] xl:gap-[17px] 2xl:gap-[19px] 3xl:gap-[23px] grid grid-cols-2 min-h-[auto] w-[49%]"
                 orientation="horizontal"
               >
-                <Column className="bg-white_A700 items-center mb-[1px] lg:p-[21px] xl:p-[24px] 2xl:p-[27px] 3xl:p-[33px] shadow-bs w-[100%]">
+                <Column className="bg-white_A700 items-center mb-[1px] lg:p-[21px] xl:p-[24px] 2xl:p-[27px] 3xl:p-[33px] shadow-bs2 w-[100%]">
                   <Img
-                    src="images/img_graytshirtis.png"
+                    src="images/img_rectangle45_279X279.png"
                     className="lg:h-[117px] xl:h-[134px] 2xl:h-[151px] 3xl:h-[181px] lg:w-[116px] xl:w-[133px] 2xl:w-[150px] 3xl:w-[180px]"
                     alt="graytshirtis"
                   />
@@ -321,9 +333,9 @@ const Home1Page = () => {
                     $299
                   </Text>
                 </Column>
-                <Column className="bg-white_A700 items-center mt-[1px] lg:p-[21px] xl:p-[24px] 2xl:p-[27px] 3xl:p-[33px] shadow-bs w-[100%]">
+                <Column className="bg-white_A700 items-center mt-[1px] lg:p-[21px] xl:p-[24px] 2xl:p-[27px] 3xl:p-[33px] shadow-bs2 w-[100%]">
                   <Img
-                    src="images/img_redcheckereds.png"
+                    src="images/img_placeholder_4.png"
                     className="lg:h-[117px] xl:h-[134px] 2xl:h-[151px] 3xl:h-[181px] lg:w-[116px] xl:w-[133px] 2xl:w-[150px] 3xl:w-[180px]"
                     alt="redcheckereds"
                   />
@@ -341,7 +353,7 @@ const Home1Page = () => {
         <Row className="items-center lg:mt-[58px] xl:mt-[66px] 2xl:mt-[75px] 3xl:mt-[90px] w-[85%]">
           <Column
             className="bg-cover bg-repeat lg:p-[47px] xl:p-[54px] 2xl:p-[61px] 3xl:p-[73px] w-[49%]"
-            style={{ backgroundImage: "url('images/img_02.png')" }}
+            style={{ backgroundImage: "url('images/img_02_400X800.png')" }}
           >
             <Text className="font-normal leading-[normal] lg:my-[41px] xl:my-[47px] 2xl:my-[53px] 3xl:my-[63px] not-italic lg:text-[21px] xl:text-[24px] 2xl:text-[27px] 3xl:text-[32px] text-white_A700 w-[36%]">
               <span className="text-white_A700 font-poppins">
@@ -355,7 +367,7 @@ const Home1Page = () => {
           </Column>
           <Column
             className="bg-cover bg-repeat lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] lg:p-[46px] xl:p-[52px] 2xl:p-[59px] 3xl:p-[71px] w-[49%]"
-            style={{ backgroundImage: "url('images/img_03.png')" }}
+            style={{ backgroundImage: "url('images/img_03_400X801.png')" }}
           >
             <Text className="font-normal leading-[normal] lg:mb-[36px] xl:mb-[41px] 2xl:mb-[46px] 3xl:mb-[55px] lg:mt-[49px] xl:mt-[56px] 2xl:mt-[63px] 3xl:mt-[76px] not-italic lg:text-[21px] xl:text-[24px] 2xl:text-[27px] 3xl:text-[32px] text-white_A700 w-[35%]">
               <span className="text-white_A700 font-poppins">
@@ -374,7 +386,7 @@ const Home1Page = () => {
             </Text>
           </Column>
           <Row className="absolute bottom-[0] inset-x-[0] items-center mx-[auto] w-[85%]">
-            <Row className="bg-white_A700 items-center justify-end lg:p-[26px] xl:p-[30px] 2xl:p-[34px] 3xl:p-[41px] shadow-bs1 w-[24%]">
+            <Row className="bg-white_A700 items-center justify-end lg:p-[26px] xl:p-[30px] 2xl:p-[34px] 3xl:p-[41px] shadow-bs3 w-[24%]">
               <Img
                 src="images/img_music.svg"
                 className="lg:h-[18px] xl:h-[21px] 2xl:h-[23px] 3xl:h-[28px] w-[16%]"
@@ -391,7 +403,7 @@ const Home1Page = () => {
                 </Text>
               </Column>
             </Row>
-            <Row className="bg-white_A700 items-center justify-end lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] lg:p-[26px] xl:p-[30px] 2xl:p-[34px] 3xl:p-[41px] shadow-bs1 w-[24%]">
+            <Row className="bg-white_A700 items-center justify-end lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] lg:p-[26px] xl:p-[30px] 2xl:p-[34px] 3xl:p-[41px] shadow-bs3 w-[24%]">
               <Img
                 src="images/img_computer.svg"
                 className="lg:h-[20px] xl:h-[23px] 2xl:h-[26px] 3xl:h-[31px] w-[15%]"
@@ -408,7 +420,7 @@ const Home1Page = () => {
                 </Text>
               </Column>
             </Row>
-            <Row className="bg-white_A700 items-center justify-end lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] lg:p-[26px] xl:p-[30px] 2xl:p-[34px] 3xl:p-[41px] shadow-bs1 w-[24%]">
+            <Row className="bg-white_A700 items-center justify-end lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] lg:p-[26px] xl:p-[30px] 2xl:p-[34px] 3xl:p-[41px] shadow-bs3 w-[24%]">
               <Img
                 src="images/img_clock.svg"
                 className="lg:h-[27px] xl:h-[31px] 2xl:h-[35px] 3xl:h-[42px] w-[11%]"
@@ -425,7 +437,7 @@ const Home1Page = () => {
                 </Text>
               </Column>
             </Row>
-            <Row className="bg-white_A700 items-center justify-end lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] lg:p-[26px] xl:p-[30px] 2xl:p-[34px] 3xl:p-[41px] shadow-bs1 w-[24%]">
+            <Row className="bg-white_A700 items-center justify-end lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] lg:p-[26px] xl:p-[30px] 2xl:p-[34px] 3xl:p-[41px] shadow-bs3 w-[24%]">
               <Img
                 src="images/img_music_45X38.svg"
                 className="lg:h-[27px] xl:h-[31px] 2xl:h-[34px] 3xl:h-[41px] w-[13%]"
@@ -458,7 +470,7 @@ const Home1Page = () => {
         >
           <Column className="items-center pb-[4px] w-[100%]">
             <Img
-              src="images/img_placeholder_245X245.png"
+              src="images/img_placeholder_2.png"
               className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
               alt="placeholder Five"
             />
@@ -481,7 +493,7 @@ const Home1Page = () => {
           </Column>
           <Column className="items-center pb-[4px] w-[100%]">
             <Img
-              src="images/img_placeholder.png"
+              src="images/img_placeholder_5.png"
               className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
               alt="placeholder Six"
             />
@@ -504,7 +516,7 @@ const Home1Page = () => {
           </Column>
           <Column className="items-center pb-[4px] w-[100%]">
             <Img
-              src="images/img_placeholder_2.png"
+              src="images/img_placeholder_1.png"
               className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
               alt="placeholder Seven"
             />
@@ -526,7 +538,7 @@ const Home1Page = () => {
           </Column>
           <Column className="pb-[4px] w-[100%]">
             <Img
-              src="images/img_placeholder_3.png"
+              src="images/img_placeholder_6.png"
               className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
               alt="placeholder Eight"
             />
@@ -548,7 +560,7 @@ const Home1Page = () => {
           </Column>
           <Column className="items-center pb-[4px] w-[100%]">
             <Img
-              src="images/img_placeholder_1.png"
+              src="images/img_placeholder_245X245.png"
               className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
               alt="placeholder Nine"
             />
@@ -571,7 +583,7 @@ const Home1Page = () => {
           </Column>
           <Column className="items-center pb-[4px] w-[100%]">
             <Img
-              src="images/img_placeholder_4.png"
+              src="images/img_placeholder_3.png"
               className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
               alt="placeholder Ten"
             />

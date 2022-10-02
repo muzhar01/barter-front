@@ -12,22 +12,22 @@ const Home = () => {
       </p>
       <ul>
         <li>
-          <Link to="/home1">Home1</Link>
+          <Link to="/homepagevtwo">HomepageVTwo</Link>
         </li>
         <li>
-          <Link to="/productdetails">ProductDetails</Link>
+          <Link to="/home1">Home1</Link>
         </li>
         <li>
           <Link to="/categorieswithsidebar">CategorieswithSidebar</Link>
         </li>
         <li>
-          <Link to="/cart">Cart</Link>
-        </li>
-        <li>
-          <Link to="/homepagevtwo">HomepageVTwo</Link>
-        </li>
-        <li>
           <Link to="/ads">Ads</Link>
+        </li>
+        <li>
+          <Link to="/productdetails">ProductDetails</Link>
+        </li>
+        <li>
+          <Link to="/cart">Cart</Link>
         </li>
       </ul>
     </div>

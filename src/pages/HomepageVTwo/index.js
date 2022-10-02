@@ -19,7 +19,7 @@ import {
 const HomepageVTwoPage = () => {
   const navigate = useNavigate();
 
-  function handleNavigate4() {
+  function handleNavigate6() {
     navigate("/home1");
   }
 
@@ -30,7 +30,7 @@ const HomepageVTwoPage = () => {
     <>
       <Column
         className="common-pointer bg-white_A700 font-poppins items-center mx-[auto] w-[100%]"
-        onClick={handleNavigate4}
+        onClick={handleNavigate6}
       >
         <header className="w-[100%]">
           <Column className="bg-white_A700 items-center lg:p-[14px] xl:p-[16px] 2xl:p-[18px] 3xl:p-[21px] w-[100%]">
@@ -49,22 +49,18 @@ const HomepageVTwoPage = () => {
                 </Text>
                 <Stack className="bg-gray_800 lg:h-[28px] xl:h-[33px] 2xl:h-[37px] 3xl:h-[44px] lg:ml-[231px] xl:ml-[264px] 2xl:ml-[297px] 3xl:ml-[357px] 2xl:px-[10px] 3xl:px-[12px] lg:px-[8px] xl:px-[9px] lg:w-[28px] xl:w-[32px] 2xl:w-[36px] 3xl:w-[43px]">
                   <Img
-                    src="images/img_search_white_A700.svg"
+                    src="images/img_search.svg"
                     className="absolute lg:h-[11px] xl:h-[13px] 2xl:h-[14px] 3xl:h-[17px] inset-[0] justify-center m-[auto] lg:w-[10px] xl:w-[12px] 2xl:w-[13px] 3xl:w-[16px]"
                     alt="search"
                   />
                 </Stack>
               </Row>
               <Img
-                src="images/img_car_19X76.svg"
+                src="images/img_car.svg"
                 className="lg:h-[12px] xl:h-[13px] 2xl:h-[15px] 3xl:h-[18px] lg:ml-[178px] xl:ml-[204px] 2xl:ml-[229px] 3xl:ml-[275px] w-[5%]"
                 alt="car"
               />
-              <Button
-                className="font-bold lg:ml-[19px] xl:ml-[22px] 2xl:ml-[25px] 3xl:ml-[30px] 2xl:text-[10px] 3xl:text-[12px] lg:text-[8px] xl:text-[9px] text-center w-[7%]"
-                size="sm"
-                variant="FillGray800"
-              >
+              <Button className="font-bold lg:ml-[19px] xl:ml-[22px] 2xl:ml-[25px] 3xl:ml-[30px] 2xl:text-[10px] 3xl:text-[12px] lg:text-[8px] xl:text-[9px] text-center w-[7%]">
                 Login
               </Button>
             </Row>
@@ -108,7 +104,7 @@ const HomepageVTwoPage = () => {
                     <Column
                       className="bg-cover bg-repeat items-center w-[100%]"
                       style={{
-                        backgroundImage: "url('images/img_group396.png')",
+                        backgroundImage: "url('images/img_group304.png')",
                       }}
                     >
                       <Column className="bg-black_900_68 justify-end lg:p-[18px] xl:p-[21px] 2xl:p-[24px] 3xl:p-[28px] w-[100%]">
@@ -159,10 +155,10 @@ const HomepageVTwoPage = () => {
                 unselectedWrapperCss="2xl:mx-[3px] 3xl:mx-[3px] inline-block lg:mx-[2px] xl:mx-[2px]"
               />
             </Stack>
-            <Row className="absolute bottom-[4%] items-center justify-center lg:pr-[102px] xl:pr-[117px] 2xl:pr-[132px] 3xl:pr-[158px] right-[0] shadow-bs2 w-[59%]">
+            <Row className="absolute bottom-[4%] items-center justify-center lg:pr-[102px] xl:pr-[117px] 2xl:pr-[132px] 3xl:pr-[158px] right-[0] shadow-bs w-[59%]">
               <Column className="bg-white_A700 xl:h-[107px] 2xl:h-[121px] 3xl:h-[145px] lg:h-[94px] items-center lg:px-[19px] xl:px-[22px] 2xl:px-[25px] 3xl:px-[30px] xl:w-[106px] 2xl:w-[120px] 3xl:w-[144px] lg:w-[93px]">
                 <Img
-                  src="images/img_vector_68X68.svg"
+                  src="images/img_call.svg"
                   className="lg:h-[23px] xl:h-[27px] 2xl:h-[30px] 3xl:h-[36px] mt-[4px] lg:w-[22px] xl:w-[26px] 2xl:w-[29px] 3xl:w-[35px]"
                   alt="Vector"
                 />
@@ -182,9 +178,9 @@ const HomepageVTwoPage = () => {
               </Column>
               <Column className="bg-white_A700 xl:h-[107px] 2xl:h-[121px] 3xl:h-[145px] lg:h-[94px] items-center xl:ml-[10px] 2xl:ml-[12px] 3xl:ml-[14px] lg:ml-[9px] lg:px-[19px] xl:px-[22px] 2xl:px-[25px] 3xl:px-[30px] xl:w-[106px] 2xl:w-[120px] 3xl:w-[144px] lg:w-[93px]">
                 <Img
-                  src="images/img_vector_68X43.svg"
+                  src="images/img_trash.svg"
                   className="lg:h-[23px] xl:h-[27px] 2xl:h-[30px] 3xl:h-[36px] mt-[4px] w-[27%]"
-                  alt="Vector One"
+                  alt="trash One"
                 />
                 <Text className="font-normal lg:mt-[16px] xl:mt-[18px] 2xl:mt-[21px] 3xl:mt-[25px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-gray_500 w-[auto]">
                   Pants
@@ -202,9 +198,9 @@ const HomepageVTwoPage = () => {
               </Column>
               <Column className="bg-white_A700 xl:h-[107px] 2xl:h-[121px] 3xl:h-[145px] lg:h-[94px] items-center xl:ml-[10px] 2xl:ml-[12px] 3xl:ml-[14px] lg:ml-[9px] lg:px-[19px] xl:px-[22px] 2xl:px-[25px] 3xl:px-[30px] xl:w-[106px] 2xl:w-[120px] 3xl:w-[144px] lg:w-[93px]">
                 <Img
-                  src="images/img_vector_68X48.svg"
+                  src="images/img_vector_39X28.svg"
                   className="lg:h-[23px] xl:h-[27px] 2xl:h-[30px] 3xl:h-[36px] mt-[4px] w-[30%]"
-                  alt="Vector Two"
+                  alt="Vector One"
                 />
                 <Text className="font-normal lg:mt-[16px] xl:mt-[18px] 2xl:mt-[21px] 3xl:mt-[25px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-gray_500 w-[auto]">
                   Dress
@@ -226,13 +222,13 @@ const HomepageVTwoPage = () => {
         <Img
           src="images/img_vector_gray_500.svg"
           className="lg:h-[40px] xl:h-[46px] 2xl:h-[52px] 3xl:h-[62px] 3xl:mt-[103px] lg:mt-[67px] xl:mt-[76px] 2xl:mt-[86px] w-[50%]"
-          alt="Vector Three"
+          alt="Vector Two"
         />
         <Row className="items-center 3xl:mt-[103px] lg:mt-[67px] xl:mt-[76px] 2xl:mt-[86px] w-[85%]">
           <Column className="lg:h-[486px] xl:h-[556px] 2xl:h-[625px] 3xl:h-[750px] items-center lg:w-[485px] xl:w-[555px] 2xl:w-[624px] 3xl:w-[749px]">
             <Column
               className="bg-cover bg-repeat lg:p-[47px] xl:p-[54px] 2xl:p-[61px] 3xl:p-[73px] w-[96%]"
-              style={{ backgroundImage: "url('images/img_02_400X800.png')" }}
+              style={{ backgroundImage: "url('images/img_02.png')" }}
             >
               <Text className="font-normal leading-[normal] lg:my-[41px] xl:my-[47px] 2xl:my-[53px] 3xl:my-[63px] not-italic lg:text-[21px] xl:text-[24px] 2xl:text-[27px] 3xl:text-[32px] text-white_A700 w-[36%]">
                 <span className="text-white_A700 font-poppins">
@@ -260,7 +256,7 @@ const HomepageVTwoPage = () => {
           </Column>
           <Column
             className="bg-cover bg-repeat lg:p-[46px] xl:p-[52px] 2xl:p-[59px] 3xl:p-[71px] w-[49%]"
-            style={{ backgroundImage: "url('images/img_03_832X801.png')" }}
+            style={{ backgroundImage: "url('images/img_03.png')" }}
           >
             <Text className="font-normal leading-[normal] lg:mb-[200px] xl:mb-[229px] 2xl:mb-[258px] 3xl:mb-[309px] lg:mt-[137px] xl:mt-[157px] 2xl:mt-[177px] 3xl:mt-[212px] not-italic lg:text-[21px] xl:text-[24px] 2xl:text-[27px] 3xl:text-[32px] text-white_A700 w-[35%]">
               <span className="text-white_A700 font-poppins">
@@ -288,7 +284,7 @@ const HomepageVTwoPage = () => {
         <Row className="items-center lg:mt-[23px] xl:mt-[26px] 2xl:mt-[30px] 3xl:mt-[36px] w-[85%]">
           <Column
             className="bg-cover bg-repeat items-center lg:p-[39px] xl:p-[45px] 2xl:p-[51px] 3xl:p-[61px] w-[32%]"
-            style={{ backgroundImage: "url('images/img_placeholder_10.png')" }}
+            style={{ backgroundImage: "url('images/img_sidebanner.png')" }}
           >
             <Text className="font-normal leading-[normal] lg:mb-[316px] xl:mb-[361px] 2xl:mb-[406px] 3xl:mb-[488px] not-italic lg:text-[21px] xl:text-[24px] 2xl:text-[27px] 3xl:text-[32px] text-center text-gray_800 w-[83%]">
               <span className="text-gray_800 font-poppins">
@@ -302,7 +298,7 @@ const HomepageVTwoPage = () => {
           <Grid className="lg:gap-[18px] xl:gap-[21px] 2xl:gap-[24px] 3xl:gap-[28px] grid grid-cols-4 lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] w-[66%]">
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_placeholder_9.png"
+                src="images/img_rectangle39.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="RectangleThirtyNine"
               />
@@ -316,7 +312,7 @@ const HomepageVTwoPage = () => {
             </Column>
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_placeholder_10.png"
+                src="images/img_sidebanner.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="RectangleThirtyNine One"
               />
@@ -331,7 +327,7 @@ const HomepageVTwoPage = () => {
             </Column>
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_placeholder_175X225.png"
+                src="images/img_rectangle39_245X245.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="RectangleThirtyNine Two"
               />
@@ -345,7 +341,7 @@ const HomepageVTwoPage = () => {
             </Column>
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_placeholder_12.png"
+                src="images/img_rectangle39_1.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="RectangleThirtyNine Three"
               />
@@ -359,7 +355,7 @@ const HomepageVTwoPage = () => {
             </Column>
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_placeholder_11.png"
+                src="images/img_rectangle39_2.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="RectangleThirtyNine Four"
               />
@@ -386,7 +382,7 @@ const HomepageVTwoPage = () => {
             </Column>
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_placeholder_8.png"
+                src="images/img_rectangle39_4.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="RectangleThirtyNine Six"
               />
@@ -400,7 +396,7 @@ const HomepageVTwoPage = () => {
             </Column>
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_placeholder_11.png"
+                src="images/img_rectangle39_2.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="RectangleThirtyNine Seven"
               />
@@ -423,7 +419,7 @@ const HomepageVTwoPage = () => {
             className="absolute bottom-[0] lg:gap-[18px] xl:gap-[21px] 2xl:gap-[24px] 3xl:gap-[28px] grid grid-cols-2 inset-x-[0] min-h-[auto] mx-[auto] w-[85%]"
             orientation="horizontal"
           >
-            <Row className="bg-gray_50 items-center lg:p-[18px] xl:p-[21px] 2xl:p-[24px] 3xl:p-[28px] shadow-bs3 w-[100%]">
+            <Row className="bg-gray_50 items-center lg:p-[18px] xl:p-[21px] 2xl:p-[24px] 3xl:p-[28px] shadow-bs1 w-[100%]">
               <Column className="items-center w-[44%]">
                 <Img
                   src="images/img_rectangle45.png"
@@ -432,8 +428,7 @@ const HomepageVTwoPage = () => {
                 />
                 <Button
                   className="font-bold lg:mt-[18px] xl:mt-[21px] 2xl:mt-[24px] 3xl:mt-[28px] lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-center w-[61%]"
-                  size="md"
-                  variant="FillGray800"
+                  size="lg"
                 >
                   Add to Cart
                 </Button>
@@ -481,17 +476,16 @@ const HomepageVTwoPage = () => {
                 </Row>
               </Column>
             </Row>
-            <Row className="bg-gray_50 items-center lg:p-[18px] xl:p-[21px] 2xl:p-[24px] 3xl:p-[28px] shadow-bs3 w-[100%]">
+            <Row className="bg-gray_50 items-center lg:p-[18px] xl:p-[21px] 2xl:p-[24px] 3xl:p-[28px] shadow-bs1 w-[100%]">
               <Column className="items-center w-[44%]">
                 <Img
-                  src="images/img_graytshirtis.png"
+                  src="images/img_rectangle45_279X279.png"
                   className="lg:h-[163px] xl:h-[187px] 2xl:h-[210px] 3xl:h-[252px] lg:w-[162px] xl:w-[186px] 2xl:w-[209px] 3xl:w-[251px]"
                   alt="RectangleFortyFive One"
                 />
                 <Button
                   className="font-bold lg:mt-[18px] xl:mt-[21px] 2xl:mt-[24px] 3xl:mt-[28px] lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-center w-[61%]"
-                  size="md"
-                  variant="FillGray800"
+                  size="lg"
                 >
                   Add to Cart
                 </Button>
@@ -553,7 +547,7 @@ const HomepageVTwoPage = () => {
               >
                 <Row className="items-center justify-between lg:my-[36px] xl:my-[41px] 2xl:my-[46px] 3xl:my-[56px] w-[100%]">
                   <Img
-                    src="images/img_pink3tz3pbb1.png"
+                    src="images/img_placeholder.png"
                     className="lg:h-[63px] xl:h-[72px] 2xl:h-[81px] 3xl:h-[97px] lg:w-[62px] xl:w-[71px] 2xl:w-[80px] 3xl:w-[96px]"
                     alt="placeholder"
                   />
@@ -566,7 +560,7 @@ const HomepageVTwoPage = () => {
                     </Text>
                   </Column>
                   <Img
-                    src="images/img_placeholder_523X800.png"
+                    src="images/img_placeholder_107X107.png"
                     className="lg:h-[63px] xl:h-[72px] 2xl:h-[81px] 3xl:h-[97px] lg:w-[62px] xl:w-[71px] 2xl:w-[80px] 3xl:w-[96px]"
                     alt="placeholder One"
                   />
@@ -581,7 +575,7 @@ const HomepageVTwoPage = () => {
                 </Row>
                 <Row className="items-center lg:mr-[39px] xl:mr-[44px] 2xl:mr-[50px] 3xl:mr-[60px] lg:my-[36px] xl:my-[41px] 2xl:my-[46px] 3xl:my-[56px] w-[91%]">
                   <Img
-                    src="images/img_placeholder_2.png"
+                    src="images/img_placeholder_1.png"
                     className="lg:h-[63px] xl:h-[72px] 2xl:h-[81px] 3xl:h-[97px] lg:w-[62px] xl:w-[71px] 2xl:w-[80px] 3xl:w-[96px]"
                     alt="placeholder One"
                   />
@@ -594,7 +588,7 @@ const HomepageVTwoPage = () => {
                     </Text>
                   </Column>
                   <Img
-                    src="images/img_placeholder_245X245.png"
+                    src="images/img_placeholder_2.png"
                     className="lg:h-[63px] xl:h-[72px] 2xl:h-[81px] 3xl:h-[97px] xl:ml-[10px] 2xl:ml-[12px] 3xl:ml-[14px] lg:ml-[9px] lg:w-[62px] xl:w-[71px] 2xl:w-[80px] 3xl:w-[96px]"
                     alt="placeholder One One"
                   />
@@ -631,7 +625,7 @@ const HomepageVTwoPage = () => {
               >
                 <Row className="items-center justify-between xl:mr-[4px] lg:mr-[4px] 2xl:mr-[5px] 3xl:mr-[6px] lg:my-[35px] xl:my-[40px] 2xl:my-[45px] 3xl:my-[54px] w-[99%]">
                   <Img
-                    src="images/img_placeholder_4.png"
+                    src="images/img_placeholder_3.png"
                     className="lg:h-[63px] xl:h-[72px] 2xl:h-[81px] 3xl:h-[97px] lg:w-[62px] xl:w-[71px] 2xl:w-[80px] 3xl:w-[96px]"
                     alt="placeholder Two"
                   />
@@ -652,7 +646,7 @@ const HomepageVTwoPage = () => {
                     ></RatingBar>
                   </Column>
                   <Img
-                    src="images/img_redcheckereds.png"
+                    src="images/img_placeholder_4.png"
                     className="lg:h-[63px] xl:h-[72px] 2xl:h-[81px] 3xl:h-[97px] lg:w-[62px] xl:w-[71px] 2xl:w-[80px] 3xl:w-[96px]"
                     alt="placeholder One Two"
                   />
@@ -675,7 +669,7 @@ const HomepageVTwoPage = () => {
                 </Row>
                 <Row className="items-center justify-between lg:my-[35px] xl:my-[40px] 2xl:my-[45px] 3xl:my-[54px] w-[100%]">
                   <Img
-                    src="images/img_placeholder.png"
+                    src="images/img_placeholder_5.png"
                     className="lg:h-[63px] xl:h-[72px] 2xl:h-[81px] 3xl:h-[97px] lg:w-[62px] xl:w-[71px] 2xl:w-[80px] 3xl:w-[96px]"
                     alt="placeholder Three"
                   />
@@ -696,7 +690,7 @@ const HomepageVTwoPage = () => {
                     ></RatingBar>
                   </Column>
                   <Img
-                    src="images/img_graytshirtis.png"
+                    src="images/img_rectangle45_279X279.png"
                     className="lg:h-[63px] xl:h-[72px] 2xl:h-[81px] 3xl:h-[97px] lg:w-[62px] xl:w-[71px] 2xl:w-[80px] 3xl:w-[96px]"
                     alt="placeholder One Three"
                   />

@@ -23,7 +23,7 @@ export const Button = Template.bind({});
 Button.args = {
   className: "flex items-center justify-center",
   variant: "FillGray800",
-  size: "sm",
+  size: "md",
   children: "Button",
 };
 
@@ -32,7 +32,7 @@ export const LeftIconButton = Template.bind({});
 LeftIconButton.args = {
   className: "flex items-center justify-center",
   variant: "FillGray800",
-  size: "sm",
+  size: "md",
   children: "Button",
   leftIcon: (
     <Img
@@ -48,7 +48,7 @@ export const RightIconButton = Template.bind({});
 RightIconButton.args = {
   className: "flex items-center justify-center",
   variant: "FillGray800",
-  size: "sm",
+  size: "md",
   children: "Button",
   rightIcon: (
     <Img

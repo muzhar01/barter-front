@@ -1,7 +1,7 @@
 import React from "react";
 
-import { postList } from "service/api";
 import { useNavigate } from "react-router-dom";
+import { postList } from "service/api";
 import _ from "lodash";
 import {
   Column,
@@ -21,15 +21,18 @@ import {
 const AdsPage = () => {
   const [apiData, setapiData] = React.useState();
   const [apiData1, setapiData1] = React.useState();
-  const [apiData2, setapiData2] = React.useState();
   const navigate = useNavigate();
   React.useEffect(() => {
-    callApi();
+    callApi1();
   }, []);
 
   function callApi() {
-    const req = {};
-
+    const req = { data: {} };
+    _.set(
+      req.data,
+      "options.populate",
+      JSON.parse(localStorage.getItem("ads"))
+    );
     postList(req)
       .then((res) => {
         setapiData(res);
@@ -48,31 +51,13 @@ const AdsPage = () => {
     postList(req)
       .then((res) => {
         setapiData1(res);
-
-        //TODO: You had integrated navigation action, since you've not selected the target page,
-        // you will have to update navigation code manually.
-        navigate("", { state: { ad: apiData2?.response } });
       })
       .catch((err) => {
         console.error(err);
       });
   }
-  function callApi2() {
-    const req = { data: {} };
-    _.set(req.data, "options.populate", undefined?.response);
-    postList(req)
-      .then((res) => {
-        setapiData2(res);
-
-        localStorage.setItem("ads", JSON.stringify(res?.response));
-
-        //TODO: You had integrated navigation action, since you've not selected the target page,
-        // you will have to update navigation code manually.
-        navigate("", { state: { ads: undefined?.response } });
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+  function handleNavigate2() {
+    navigate("/productdetails");
   }
 
   const sliderRef = React.useRef();
@@ -97,22 +82,18 @@ const AdsPage = () => {
               </Text>
               <Stack className="bg-gray_800 lg:h-[28px] xl:h-[33px] 2xl:h-[37px] 3xl:h-[44px] lg:ml-[231px] xl:ml-[264px] 2xl:ml-[297px] 3xl:ml-[357px] 2xl:px-[10px] 3xl:px-[12px] lg:px-[8px] xl:px-[9px] lg:w-[28px] xl:w-[32px] 2xl:w-[36px] 3xl:w-[43px]">
                 <Img
-                  src="images/img_search.svg"
+                  src="images/img_search_white_A700.svg"
                   className="absolute lg:h-[11px] xl:h-[13px] 2xl:h-[14px] 3xl:h-[17px] inset-[0] justify-center m-[auto] lg:w-[10px] xl:w-[12px] 2xl:w-[13px] 3xl:w-[16px]"
                   alt="search"
                 />
               </Stack>
             </Row>
             <Img
-              src="images/img_car.svg"
+              src="images/img_car_19X76.svg"
               className="lg:h-[12px] xl:h-[13px] 2xl:h-[15px] 3xl:h-[18px] lg:ml-[178px] xl:ml-[204px] 2xl:ml-[229px] 3xl:ml-[275px] w-[4%]"
               alt="car"
             />
-            <Button
-              className="font-bold lg:ml-[19px] xl:ml-[22px] 2xl:ml-[25px] 3xl:ml-[30px] 2xl:text-[10px] 3xl:text-[12px] lg:text-[8px] xl:text-[9px] text-center w-[6%]"
-              size="sm"
-              variant="FillGray800"
-            >
+            <Button className="font-bold lg:ml-[19px] xl:ml-[22px] 2xl:ml-[25px] 3xl:ml-[30px] 2xl:text-[10px] 3xl:text-[12px] lg:text-[8px] xl:text-[9px] text-center w-[6%]">
               Login
             </Button>
           </Row>
@@ -375,31 +356,27 @@ const AdsPage = () => {
                 }
               ></SelectBox>
             </Row>
-            <Grid
-              className="common-pointer lg:gap-[18px] xl:gap-[21px] 2xl:gap-[24px] 3xl:gap-[28px] grid grid-cols-5 lg:mt-[18px] xl:mt-[21px] 2xl:mt-[24px] 3xl:mt-[28px] w-[100%]"
-              onClick={() => {
-                callApi2();
-              }}
-            >
-              {apiData1?.response?.map((apiData1ResponseEle, index) => {
+            <Grid className="lg:gap-[18px] xl:gap-[21px] 2xl:gap-[24px] 3xl:gap-[28px] grid grid-cols-5 lg:mt-[18px] xl:mt-[21px] 2xl:mt-[24px] 3xl:mt-[28px] w-[100%]">
+              {apiData1?.data?.data?.map((apiData1DataEle, index) => {
                 return (
-                  <React.Fragment key={`apiData1ResponseEle${index}`}>
+                  <React.Fragment key={`apiData1DataEle${index}`}>
                     <Column
                       className="common-pointer items-center pb-[4px] w-[100%]"
                       onClick={() => {
-                        callApi1();
+                        callApi();
                       }}
                     >
                       <Img
-                        src={apiData?.response}
+                        src="images/img_placeholder_3.png"
                         className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                         alt="placeholder"
                       />
                       <Text className="font-medium leading-[normal] lg:mt-[14px] xl:mt-[16px] 2xl:mt-[18px] 3xl:mt-[22px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] text-center text-gray_800 w-[66%]">
-                        {apiData?.response}
+                        Green <br />
+                        Warm Jacket
                       </Text>
                       <Text className="font-medium lg:mt-[12px] xl:mt-[14px] 2xl:mt-[16px] 3xl:mt-[19px] lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-gray_500 w-[auto]">
-                        {apiData?.response}
+                        $299
                       </Text>
                     </Column>
                   </React.Fragment>
@@ -414,11 +391,11 @@ const AdsPage = () => {
               }}
               ref={sliderRef}
               className="lg:mt-[18px] xl:mt-[21px] 2xl:mt-[24px] 3xl:mt-[28px] w-[100%]"
-              items={[...Array(15)].map(() => (
-                <React.Fragment key={Math.random()}>
+              items={apiData?.data?.data?.map((apiDataDataEle, index) => (
+                <React.Fragment key={`apiDataDataEle${index}`}>
                   <Column className="items-center pb-[4px]">
                     <Img
-                      src="images/img_placeholder_250X250.png"
+                      src="images/img_placeholder_9.png"
                       className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                       alt="placeholder Fifteen"
                     />
@@ -441,23 +418,17 @@ const AdsPage = () => {
               }}
             />
             <Row className="items-center lg:mt-[32px] xl:mt-[37px] 2xl:mt-[42px] 3xl:mt-[50px] lg:px-[22px] xl:px-[26px] 2xl:px-[29px] 3xl:px-[35px] w-[21%]">
-              <Button
-                className="font-normal lg:h-[30px] xl:h-[34px] 2xl:h-[38px] 3xl:h-[46px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-center lg:w-[29px] xl:w-[33px] 2xl:w-[37px] 3xl:w-[45px]"
-                size="sm"
-                variant="FillGray800"
-              >
+              <Button className="font-normal lg:h-[30px] xl:h-[34px] 2xl:h-[38px] 3xl:h-[46px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-center lg:w-[29px] xl:w-[33px] 2xl:w-[37px] 3xl:w-[45px]">
                 1
               </Button>
               <Button
                 className="font-normal lg:h-[30px] xl:h-[35px] 2xl:h-[39px] 3xl:h-[46px] lg:ml-[14px] xl:ml-[16px] 2xl:ml-[18px] 3xl:ml-[21px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-center lg:w-[29px] xl:w-[34px] 2xl:w-[38px] 3xl:w-[45px]"
-                size="sm"
                 variant="OutlineGray500"
               >
                 2
               </Button>
               <Button
                 className="font-normal lg:h-[30px] xl:h-[35px] 2xl:h-[39px] 3xl:h-[46px] lg:ml-[14px] xl:ml-[16px] 2xl:ml-[18px] 3xl:ml-[21px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-center lg:w-[29px] xl:w-[34px] 2xl:w-[38px] 3xl:w-[45px]"
-                size="sm"
                 variant="OutlineGray500"
               >
                 3
