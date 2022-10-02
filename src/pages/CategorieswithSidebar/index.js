@@ -17,11 +17,11 @@ import {
 const CategorieswithSidebarPage = () => {
   const navigate = useNavigate();
 
-  function handleNavigate2() {
-    navigate("/productlist");
+  function handleNavigate4() {
+    navigate("/ads");
   }
-  function handleNavigate3() {
-    navigate("/productlist");
+  function handleNavigate5() {
+    navigate("/ads");
   }
 
   return (
@@ -43,22 +43,18 @@ const CategorieswithSidebarPage = () => {
               </Text>
               <Stack className="bg-gray_800 lg:h-[28px] xl:h-[33px] 2xl:h-[37px] 3xl:h-[44px] lg:ml-[231px] xl:ml-[264px] 2xl:ml-[297px] 3xl:ml-[357px] 2xl:px-[10px] 3xl:px-[12px] lg:px-[8px] xl:px-[9px] lg:w-[28px] xl:w-[32px] 2xl:w-[36px] 3xl:w-[43px]">
                 <Img
-                  src="images/img_search.svg"
+                  src="images/img_search_white_A700.svg"
                   className="absolute lg:h-[11px] xl:h-[13px] 2xl:h-[14px] 3xl:h-[17px] inset-[0] justify-center m-[auto] lg:w-[10px] xl:w-[12px] 2xl:w-[13px] 3xl:w-[16px]"
                   alt="search"
                 />
               </Stack>
             </Row>
             <Img
-              src="images/img_car.svg"
+              src="images/img_car_19X76.svg"
               className="lg:h-[12px] xl:h-[13px] 2xl:h-[15px] 3xl:h-[18px] lg:ml-[178px] xl:ml-[204px] 2xl:ml-[229px] 3xl:ml-[275px] w-[4%]"
               alt="car"
             />
-            <Button
-              className="font-bold lg:ml-[19px] xl:ml-[22px] 2xl:ml-[25px] 3xl:ml-[30px] 2xl:text-[10px] 3xl:text-[12px] lg:text-[8px] xl:text-[9px] text-center w-[6%]"
-              size="sm"
-              variant="FillGray800"
-            >
+            <Button className="font-bold lg:ml-[19px] xl:ml-[22px] 2xl:ml-[25px] 3xl:ml-[30px] 2xl:text-[10px] 3xl:text-[12px] lg:text-[8px] xl:text-[9px] text-center w-[6%]">
               Login
             </Button>
           </Row>
@@ -256,11 +252,11 @@ const CategorieswithSidebarPage = () => {
           </Column>
           <Grid
             className="common-pointer lg:gap-[18px] xl:gap-[21px] 2xl:gap-[24px] 3xl:gap-[28px] grid grid-cols-2 w-[83%]"
-            onClick={handleNavigate3}
+            onClick={handleNavigate5}
           >
             <Row
               className="common-pointer bg-gray_50 items-center justify-center lg:p-[37px] xl:p-[43px] 2xl:p-[48px] 3xl:p-[58px] w-[100%]"
-              onClick={handleNavigate2}
+              onClick={handleNavigate4}
             >
               <Img
                 src="images/img_vector_gray_800.svg"

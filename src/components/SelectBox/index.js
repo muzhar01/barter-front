@@ -9,14 +9,6 @@ const selectOptions = [
   { value: "option3", label: "Option3" },
 ];
 
-const variants = {
-  OutlineBluegray100: "border border-bluegray_100 border-solid",
-};
-
-const sizes = {
-  sm: "lg:p-[11px] xl:p-[13px] 2xl:p-[15px] 3xl:p-[18px] p-[20px]",
-};
-
 const SelectBox = React.forwardRef(
   (
     {
@@ -31,8 +23,6 @@ const SelectBox = React.forwardRef(
       value,
       errors = [],
       indicator,
-      variant,
-      size,
       ...restProps
     },
     ref
@@ -52,9 +42,7 @@ const SelectBox = React.forwardRef(
         <Select
           ref={ref}
           options={options}
-          className={`${className}  ${variants[variant] || ""} ${
-            sizes[size] || ""
-          } common-select`}
+          className={`${className}    common-select`}
           placeholder={
             <div className={placeholderClassName}>{placeholder}</div>
           }
@@ -143,8 +131,6 @@ SelectBox.propTypes = {
   isMulti: PropTypes.bool,
   onChange: PropTypes.func,
   value: PropTypes.string,
-  variant: PropTypes.oneOf(["OutlineBluegray100"]),
-  size: PropTypes.oneOf(["sm"]),
 };
 SelectBox.defaultProps = {
   placeholder: "Select",
@@ -153,8 +139,6 @@ SelectBox.defaultProps = {
   placeholderClassName: "",
   isMulti: false,
   value: "",
-  variant: "",
-  size: "",
   options: selectOptions,
   onChange: () => {},
 };

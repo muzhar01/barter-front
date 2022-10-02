@@ -6,8 +6,10 @@ import { Column, Row, Img, Text, Button, Line, List, Stack } from "components";
 const CartPage = () => {
   const navigate = useNavigate();
 
-  function handleNavigate9() {
-    navigate("/checkout");
+  function handleNavigate7() {
+    //TODO: You had integrated navigation action, since you've not selected the target page,
+    // you will have to update navigation code manually.
+    navigate("");
   }
 
   return (
@@ -26,14 +28,13 @@ const CartPage = () => {
                   Elliye{" "}
                 </Text>
                 <Img
-                  src="images/img_car.svg"
+                  src="images/img_car_19X76.svg"
                   className="lg:h-[12px] xl:h-[13px] 2xl:h-[15px] 3xl:h-[18px] lg:ml-[316px] xl:ml-[362px] 2xl:ml-[407px] 3xl:ml-[488px] w-[4%]"
                   alt="car"
                 />
                 <Button
                   className="font-medium lg:ml-[19px] xl:ml-[22px] 2xl:ml-[25px] 3xl:ml-[30px] 3xl:mr-[108px] lg:mr-[70px] xl:mr-[80px] 2xl:mr-[90px] lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-center w-[6%]"
                   size="sm"
-                  variant="FillGray800"
                 >
                   Login
                 </Button>
@@ -102,7 +103,7 @@ const CartPage = () => {
             <Row className="items-center lg:my-[18px] xl:my-[21px] 2xl:my-[24px] 3xl:my-[28px] w-[100%]">
               <Stack className="border border-bluegray_100 border-solid lg:h-[117px] xl:h-[134px] 2xl:h-[151px] 3xl:h-[181px] lg:px-[5px] xl:px-[6px] 2xl:px-[7px] 3xl:px-[9px] lg:w-[116px] xl:w-[133px] 2xl:w-[150px] 3xl:w-[180px]">
                 <Img
-                  src="images/img_placeholder_5.png"
+                  src="images/img_placeholder_7.png"
                   className="absolute lg:h-[105px] xl:h-[121px] 2xl:h-[136px] 3xl:h-[163px] inset-[0] justify-center m-[auto] lg:w-[105px] xl:w-[120px] 2xl:w-[135px] 3xl:w-[162px]"
                   alt="placeholder"
                 />
@@ -127,7 +128,6 @@ const CartPage = () => {
                 </Column>
                 <Button
                   className="absolute font-medium lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-center w-[100%]"
-                  size="sm"
                   variant="OutlineBluegray100"
                 >
                   1
@@ -149,7 +149,7 @@ const CartPage = () => {
             <Row className="items-center lg:my-[18px] xl:my-[21px] 2xl:my-[24px] 3xl:my-[28px] w-[100%]">
               <Stack className="border border-bluegray_100 border-solid lg:h-[117px] xl:h-[134px] 2xl:h-[151px] 3xl:h-[181px] lg:px-[5px] xl:px-[6px] 2xl:px-[7px] 3xl:px-[9px] lg:w-[116px] xl:w-[133px] 2xl:w-[150px] 3xl:w-[180px]">
                 <Img
-                  src="images/img_rectangle39.png"
+                  src="images/img_rectangle39_5.png"
                   className="absolute lg:h-[105px] xl:h-[121px] 2xl:h-[136px] 3xl:h-[163px] inset-[0] justify-center m-[auto] lg:w-[105px] xl:w-[120px] 2xl:w-[135px] 3xl:w-[162px]"
                   alt="placeholder One"
                 />
@@ -174,7 +174,6 @@ const CartPage = () => {
                 </Column>
                 <Button
                   className="absolute font-medium lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-center w-[100%]"
-                  size="sm"
                   variant="OutlineBluegray100"
                 >
                   1
@@ -198,11 +197,7 @@ const CartPage = () => {
               <Text className="font-normal not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-gray_500_87 tracking-ls1 w-[auto]">
                 Enter coupon code
               </Text>
-              <Button
-                className="font-normal not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-center w-[31%]"
-                size="md"
-                variant="FillGray800"
-              >
+              <Button className="font-normal not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-center w-[31%]">
                 Apply Code
               </Button>
             </Row>
@@ -227,9 +222,7 @@ const CartPage = () => {
             </Button>
             <Button
               className="common-pointer font-medium lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-center w-[42%]"
-              onClick={handleNavigate9}
-              size="sm"
-              variant="FillGray800"
+              onClick={handleNavigate7}
             >
               Checkout
             </Button>

@@ -9,12 +9,11 @@ import { Row } from "./Row";
 import { Stack } from "./Stack";
 import { Text } from "./Text";
 import { Button } from "./Button";
+import { Slider } from "./Slider";
+import { PagerIndicator } from "./PagerIndicator";
 import { RatingBar } from "./RatingBar";
 import { CheckBox } from "./CheckBox";
-import { PagerIndicator } from "./PagerIndicator";
-import { Input } from "./Input";
 import { SelectBox } from "./SelectBox";
-import { Slider } from "./Slider";
 export {
   Column,
   Datepicker,
@@ -27,10 +26,9 @@ export {
   Stack,
   Text,
   Button,
+  Slider,
+  PagerIndicator,
   RatingBar,
   CheckBox,
-  PagerIndicator,
-  Input,
   SelectBox,
-  Slider,
 };

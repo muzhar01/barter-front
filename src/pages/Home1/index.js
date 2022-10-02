@@ -6,7 +6,9 @@ import {
   Row,
   Text,
   Img,
+  PagerIndicator,
   Line,
+  Slider,
   Button,
   Grid,
   Stack,
@@ -14,15 +16,15 @@ import {
   RatingBar,
 } from "components";
 
-const HomepageVThreePage = () => {
+const Home1Page = () => {
   const navigate = useNavigate();
 
-  function handleNavigate5() {
+  function handleNavigate1() {
     navigate("/categorieswithsidebar");
   }
-  function handleNavigate11() {
-    navigate("/categorieswithsidebar");
-  }
+
+  const sliderRef = React.useRef();
+  const [sliderState, setsliderState] = React.useState(0);
 
   return (
     <>
@@ -32,7 +34,7 @@ const HomepageVThreePage = () => {
             <Row className="bg-white_A700 items-center lg:p-[19px] xl:p-[22px] 2xl:p-[24px] 3xl:p-[29px] w-[100%]">
               <Text
                 className="common-pointer cursor-pointer hover:font-bold font-normal lg:ml-[64px] xl:ml-[73px] 2xl:ml-[82px] 3xl:ml-[99px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-gray_800 w-[auto]"
-                onClick={handleNavigate11}
+                onClick={handleNavigate1}
               >
                 Categories
               </Text>
@@ -59,132 +61,69 @@ const HomepageVThreePage = () => {
                 alt="icon"
               />
             </Row>
-            <Row className="bg-white_A700 items-center lg:px-[187px] xl:px-[214px] 2xl:px-[241px] 3xl:px-[289px] w-[100%]">
-              <Column className="bg-white_A700 3xl:h-[109px] lg:h-[70px] xl:h-[81px] 2xl:h-[91px] items-center lg:px-[13px] xl:px-[15px] 2xl:px-[17px] 3xl:px-[20px] 3xl:w-[108px] lg:w-[70px] xl:w-[80px] 2xl:w-[90px]">
-                <Img
-                  src="images/img_ticket.svg"
-                  className="lg:h-[20px] xl:h-[23px] 2xl:h-[26px] 3xl:h-[31px] mt-[1px] lg:w-[19px] xl:w-[22px] 2xl:w-[25px] 3xl:w-[30px]"
-                  alt="ticket"
-                />
-                <Text className="font-normal lg:mt-[11px] xl:mt-[12px] 2xl:mt-[14px] 3xl:mt-[17px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-bluegray_100 w-[auto]">
-                  Jacket
-                </Text>
-              </Column>
-              <Column className="bg-white_A700 3xl:h-[109px] lg:h-[70px] xl:h-[81px] 2xl:h-[91px] items-center lg:ml-[14px] xl:ml-[16px] 2xl:ml-[18px] 3xl:ml-[21px] lg:px-[13px] xl:px-[15px] 2xl:px-[17px] 3xl:px-[20px] 3xl:w-[108px] lg:w-[70px] xl:w-[80px] 2xl:w-[90px]">
-                <Img
-                  src="images/img_share.svg"
-                  className="lg:h-[18px] xl:h-[21px] 2xl:h-[23px] 3xl:h-[28px] mt-[3px] w-[45%]"
-                  alt="share"
-                />
-                <Text className="font-normal lg:mt-[12px] xl:mt-[14px] 2xl:mt-[15px] 3xl:mt-[18px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-bluegray_100 w-[auto]">
-                  Shirt
-                </Text>
-              </Column>
-              <Column className="bg-white_A700 3xl:h-[109px] lg:h-[70px] xl:h-[81px] 2xl:h-[91px] items-center lg:ml-[14px] xl:ml-[16px] 2xl:ml-[18px] 3xl:ml-[21px] lg:px-[13px] xl:px-[15px] 2xl:px-[17px] 3xl:px-[20px] 3xl:w-[108px] lg:w-[70px] xl:w-[80px] 2xl:w-[90px]">
-                <Img
-                  src="images/img_bookmark.svg"
-                  className="lg:h-[20px] xl:h-[23px] 2xl:h-[26px] 3xl:h-[31px] mt-[1px] w-[28%]"
-                  alt="bookmark"
-                />
-                <Text className="font-normal lg:mt-[11px] xl:mt-[12px] 2xl:mt-[14px] 3xl:mt-[17px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-bluegray_100 w-[auto]">
-                  Pants
-                </Text>
-              </Column>
-              <Column className="bg-white_A700 3xl:h-[109px] lg:h-[70px] xl:h-[81px] 2xl:h-[91px] items-center lg:ml-[14px] xl:ml-[16px] 2xl:ml-[18px] 3xl:ml-[21px] lg:px-[13px] xl:px-[15px] 2xl:px-[17px] 3xl:px-[20px] 3xl:w-[108px] lg:w-[70px] xl:w-[80px] 2xl:w-[90px]">
-                <Img
-                  src="images/img_settings.svg"
-                  className="lg:h-[14px] xl:h-[17px] 2xl:h-[19px] 3xl:h-[22px] lg:mt-[3px] 2xl:mt-[4px] xl:mt-[4px] 3xl:mt-[5px] w-[46%]"
-                  alt="settings"
-                />
-                <Text className="font-normal lg:mt-[14px] xl:mt-[16px] 2xl:mt-[18px] 3xl:mt-[21px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-gray_800 w-[auto]">
-                  Shoes
-                </Text>
-              </Column>
-              <Column className="bg-white_A700 3xl:h-[109px] lg:h-[70px] xl:h-[81px] 2xl:h-[91px] items-center lg:ml-[14px] xl:ml-[16px] 2xl:ml-[18px] 3xl:ml-[21px] lg:px-[13px] xl:px-[15px] 2xl:px-[17px] 3xl:px-[20px] 3xl:w-[108px] lg:w-[70px] xl:w-[80px] 2xl:w-[90px]">
-                <Img
-                  src="images/img_ticket_34X24.svg"
-                  className="lg:h-[20px] xl:h-[23px] 2xl:h-[26px] 3xl:h-[31px] mt-[1px] w-[32%]"
-                  alt="ticket One"
-                />
-                <Text className="font-normal lg:mt-[11px] xl:mt-[12px] 2xl:mt-[14px] 3xl:mt-[17px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-bluegray_100 w-[auto]">
-                  Dress
-                </Text>
-              </Column>
-              <Column className="bg-white_A700 3xl:h-[109px] lg:h-[70px] xl:h-[81px] 2xl:h-[91px] items-center lg:ml-[14px] xl:ml-[16px] 2xl:ml-[18px] 3xl:ml-[21px] lg:px-[6px] xl:px-[7px] 2xl:px-[8px] 3xl:px-[9px] 3xl:w-[108px] lg:w-[70px] xl:w-[80px] 2xl:w-[90px]">
-                <Img
-                  src="images/img_signal.svg"
-                  className="lg:h-[17px] xl:h-[19px] 2xl:h-[22px] 3xl:h-[26px] xl:mt-[11px] 2xl:mt-[12px] 3xl:mt-[15px] lg:mt-[9px] w-[35%]"
-                  alt="signal"
-                />
-                <Text className="font-normal 3xl:mb-[10px] lg:mb-[7px] xl:mb-[8px] 2xl:mb-[9px] lg:mt-[12px] xl:mt-[14px] 2xl:mt-[16px] 3xl:mt-[19px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-bluegray_100 w-[auto]">
-                  Accesories
-                </Text>
-              </Column>
-              <Column className="bg-white_A700 3xl:h-[109px] lg:h-[70px] xl:h-[81px] 2xl:h-[91px] items-center lg:ml-[14px] xl:ml-[16px] 2xl:ml-[18px] 3xl:ml-[21px] lg:px-[13px] xl:px-[15px] 2xl:px-[17px] 3xl:px-[20px] 3xl:w-[108px] lg:w-[70px] xl:w-[80px] 2xl:w-[90px]">
-                <Img
-                  src="images/img_trash.svg"
-                  className="lg:h-[20px] xl:h-[23px] 2xl:h-[26px] 3xl:h-[31px] mt-[2px] w-[38%]"
-                  alt="trash"
-                />
-                <Text className="font-normal lg:mt-[10px] xl:mt-[12px] 2xl:mt-[13px] 3xl:mt-[16px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-bluegray_100 w-[auto]">
-                  Skirt
-                </Text>
-              </Column>
-              <Column className="bg-white_A700 3xl:h-[109px] lg:h-[70px] xl:h-[81px] 2xl:h-[91px] items-center lg:ml-[14px] xl:ml-[16px] 2xl:ml-[18px] 3xl:ml-[21px] lg:px-[5px] xl:px-[6px] 2xl:px-[7px] 3xl:px-[9px] 3xl:w-[108px] lg:w-[70px] xl:w-[80px] 2xl:w-[90px]">
-                <Img
-                  src="images/img_vector.svg"
-                  className="lg:h-[20px] xl:h-[23px] 2xl:h-[25px] 3xl:h-[30px] xl:mt-[10px] 2xl:mt-[12px] 3xl:mt-[14px] lg:mt-[9px] lg:w-[19px] xl:w-[22px] 2xl:w-[24px] 3xl:w-[29px]"
-                  alt="Vector"
-                />
-                <Text className="font-normal 3xl:mb-[11px] lg:mb-[7px] xl:mb-[8px] 2xl:mb-[9px] lg:mt-[10px] xl:mt-[12px] 2xl:mt-[13px] 3xl:mt-[16px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-bluegray_100 w-[auto]">
-                  Underwear
-                </Text>
-              </Column>
-              <Column className="bg-white_A700 3xl:h-[109px] lg:h-[70px] xl:h-[81px] 2xl:h-[91px] items-center lg:ml-[14px] xl:ml-[16px] 2xl:ml-[18px] 3xl:ml-[21px] lg:px-[13px] xl:px-[15px] 2xl:px-[17px] 3xl:px-[20px] 3xl:w-[108px] lg:w-[70px] xl:w-[80px] 2xl:w-[90px]">
-                <Img
-                  src="images/img_car_9X39.svg"
-                  className="lg:h-[6px] 2xl:h-[7px] xl:h-[7px] 3xl:h-[9px] 2xl:mt-[10px] 3xl:mt-[12px] lg:mt-[8px] xl:mt-[9px] w-[53%]"
-                  alt="car"
-                />
-                <Text className="font-normal lg:mt-[18px] xl:mt-[21px] 2xl:mt-[24px] 3xl:mt-[28px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-bluegray_100 w-[auto]">
-                  More
-                </Text>
-              </Column>
-            </Row>
+            <PagerIndicator
+              className="bg-white_A700 h-[120px] lg:mx-[2px] 2xl:mx-[3px] xl:mx-[3px] 3xl:mx-[4px] lg:px-[187px] xl:px-[214px] 2xl:px-[241px] 3xl:px-[289px] w-[max-content]"
+              count={3}
+              activeCss="inline-block cursor-pointer rounded-radius50 w-[10px] h-[10px] bg-gray_50 lg:mx-[2px] xl:mx-[3px] 2xl:mx-[3px] 3xl:mx-[4px]"
+              activeIndex={sliderState}
+              inactiveCss="inline-block cursor-pointer rounded-radius50 w-[10px] h-[10px] bg-colors lg:mx-[2px] xl:mx-[3px] 2xl:mx-[3px] 3xl:mx-[4px]"
+              sliderRef={sliderRef}
+              selectedWrapperCss="inline-block"
+              unselectedWrapperCss="inline-block"
+            />
             <Line className="bg-gray_50 h-[1px] w-[85%]" />
           </Column>
         </header>
-        <Column
-          className="bg-cover bg-repeat items-center w-[100%]"
-          style={{ backgroundImage: "url('images/img_herosection.png')" }}
-        >
-          <Column className="bg-white_A700_82 xl:p-[104px] 2xl:p-[117px] 3xl:p-[141px] lg:p-[91px] w-[100%]">
-            <Button
-              className="font-medium font-poppins 3xl:ml-[113px] lg:ml-[73px] xl:ml-[84px] 2xl:ml-[94px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] text-center w-[17%]"
-              size="sm"
-              variant="FillWhiteA700"
-            >
-              50% Off Limited Offer
-            </Button>
-            <Text className="font-bold font-playfairdisplay 3xl:ml-[116px] lg:ml-[75px] xl:ml-[86px] 2xl:ml-[96px] lg:mt-[19px] xl:mt-[22px] 2xl:mt-[25px] 3xl:mt-[30px] lg:text-[42px] xl:text-[48px] 2xl:text-[54px] 3xl:text-[64px] text-gray_800 w-[auto]">
-              Summer Collection
-            </Text>
-            <Text className="font-normal font-poppins lg:leading-[18px] xl:leading-[21px] 2xl:leading-[24px] 3xl:leading-[28px] 3xl:ml-[113px] lg:ml-[73px] xl:ml-[84px] 2xl:ml-[94px] lg:mt-[26px] xl:mt-[30px] 2xl:mt-[33px] 3xl:mt-[40px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-gray_800 w-[40%]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-            </Text>
-            <Row className="bg-gray_800 font-poppins items-center 3xl:ml-[113px] lg:ml-[73px] xl:ml-[84px] 2xl:ml-[94px] lg:mt-[49px] xl:mt-[56px] 2xl:mt-[63px] 3xl:mt-[76px] xl:p-[10px] 2xl:p-[11px] 3xl:p-[13px] lg:p-[8px] w-[15%]">
-              <Text className="font-medium xl:ml-[11px] 2xl:ml-[12px] 3xl:ml-[15px] lg:ml-[9px] mt-[4px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] text-white_A700 w-[auto]">
-                Shop Now
-              </Text>
-              <Img
-                src="images/img_arrowright.svg"
-                className="2xl:h-[10px] 3xl:h-[11px] lg:h-[7px] xl:h-[9px] lg:ml-[11px] xl:ml-[13px] 2xl:ml-[15px] 3xl:ml-[18px] w-[13%]"
-                alt="arrowright"
-              />
-            </Row>
-          </Column>
-        </Column>
+        <Slider
+          slidesToShow={1}
+          activeIndex={sliderState}
+          onSlideChanged={(e) => {
+            setsliderState(e?.item);
+          }}
+          ref={sliderRef}
+          className="cursor-pointer w-[100%]"
+          items={[...Array(3)].map(() => (
+            <React.Fragment key={Math.random()}>
+              <Column
+                className="bg-cover bg-repeat items-center"
+                style={{ backgroundImage: "url('images/img_herosection.png')" }}
+              >
+                <Column className="bg-white_A700_82 xl:p-[104px] 2xl:p-[117px] 3xl:p-[141px] lg:p-[91px] w-[100%]">
+                  <Button
+                    className="font-medium font-poppins 3xl:ml-[113px] lg:ml-[73px] xl:ml-[84px] 2xl:ml-[94px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] text-center w-[17%]"
+                    variant="FillWhiteA700"
+                  >
+                    50% Off Limited Offer
+                  </Button>
+                  <Text className="font-bold font-playfairdisplay 3xl:ml-[116px] lg:ml-[75px] xl:ml-[86px] 2xl:ml-[96px] lg:mt-[19px] xl:mt-[22px] 2xl:mt-[25px] 3xl:mt-[30px] lg:text-[42px] xl:text-[48px] 2xl:text-[54px] 3xl:text-[64px] text-gray_800 w-[auto]">
+                    Summer Collection
+                  </Text>
+                  <Text className="font-normal font-poppins lg:leading-[18px] xl:leading-[21px] 2xl:leading-[24px] 3xl:leading-[28px] 3xl:ml-[113px] lg:ml-[73px] xl:ml-[84px] 2xl:ml-[94px] lg:mt-[26px] xl:mt-[30px] 2xl:mt-[33px] 3xl:mt-[40px] not-italic lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-gray_800 w-[40%]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.{" "}
+                  </Text>
+                  <Row className="bg-gray_800 font-poppins items-center 3xl:ml-[113px] lg:ml-[73px] xl:ml-[84px] 2xl:ml-[94px] lg:mt-[49px] xl:mt-[56px] 2xl:mt-[63px] 3xl:mt-[76px] xl:p-[10px] 2xl:p-[11px] 3xl:p-[13px] lg:p-[8px] w-[15%]">
+                    <Text className="font-medium xl:ml-[11px] 2xl:ml-[12px] 3xl:ml-[15px] lg:ml-[9px] mt-[4px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] text-white_A700 w-[auto]">
+                      Shop Now
+                    </Text>
+                    <Img
+                      src="images/img_arrowright.svg"
+                      className="2xl:h-[10px] 3xl:h-[11px] lg:h-[7px] xl:h-[9px] lg:ml-[11px] xl:ml-[13px] 2xl:ml-[15px] 3xl:ml-[18px] w-[13%]"
+                      alt="arrowright"
+                    />
+                  </Row>
+                </Column>
+              </Column>
+            </React.Fragment>
+          ))}
+          Indicator={({ isActive }) => {
+            if (isActive) {
+              return <div className="" />;
+            }
+            return <div className="" role="button" tabIndex={0} />;
+          }}
+        />
         <Row className="items-center justify-between lg:mt-[23px] xl:mt-[26px] 2xl:mt-[30px] 3xl:mt-[36px] w-[85%]">
           <Text className="font-bold lg:text-[21px] xl:text-[24px] 2xl:text-[27px] 3xl:text-[32px] text-gray_800 w-[auto]">
             Featured
@@ -197,7 +136,7 @@ const HomepageVThreePage = () => {
           <Grid className="lg:gap-[18px] xl:gap-[21px] 2xl:gap-[24px] 3xl:gap-[28px] grid grid-cols-2 w-[32%]">
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_rectangle39.png"
+                src="images/img_rectangle39_5.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="RectangleThirtyNine"
               />
@@ -211,7 +150,7 @@ const HomepageVThreePage = () => {
             </Column>
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_rectangle39_245X245.png"
+                src="images/img_rectangle39_6.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="RectangleThirtyNine One"
               />
@@ -226,7 +165,7 @@ const HomepageVThreePage = () => {
             </Column>
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_placeholder.png"
+                src="images/img_placeholder_5.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="placeholder"
               />
@@ -240,7 +179,7 @@ const HomepageVThreePage = () => {
             </Column>
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_placeholder_245X245.png"
+                src="images/img_placeholder_2.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="placeholder One"
               />
@@ -269,8 +208,7 @@ const HomepageVThreePage = () => {
             </Text>
             <Button
               className="font-bold lg:mt-[32px] xl:mt-[37px] 2xl:mt-[42px] 3xl:mt-[50px] lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-center w-[38%]"
-              size="md"
-              variant="FillGray800"
+              size="lg"
             >
               Add to Cart
             </Button>
@@ -278,7 +216,7 @@ const HomepageVThreePage = () => {
           <Grid className="lg:gap-[18px] xl:gap-[21px] 2xl:gap-[24px] 3xl:gap-[28px] grid grid-cols-2 lg:ml-[19px] xl:ml-[22px] 2xl:ml-[24px] 3xl:ml-[29px] w-[32%]">
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_rectangle39_1.png"
+                src="images/img_rectangle39_7.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="RectangleThirtyNine Two"
               />
@@ -292,7 +230,7 @@ const HomepageVThreePage = () => {
             </Column>
             <Column className="items-center pb-[4px] w-[100%]">
               <Img
-                src="images/img_rectangle39_2.png"
+                src="images/img_rectangle39_8.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="RectangleThirtyNine Three"
               />
@@ -306,7 +244,7 @@ const HomepageVThreePage = () => {
             </Column>
             <Column className="pb-[4px] w-[100%]">
               <Img
-                src="images/img_placeholder_1.png"
+                src="images/img_placeholder_245X245.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="placeholder Three"
               />
@@ -321,7 +259,7 @@ const HomepageVThreePage = () => {
             </Column>
             <Column className="pb-[4px] w-[100%]">
               <Img
-                src="images/img_placeholder_2.png"
+                src="images/img_placeholder_1.png"
                 className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                 alt="placeholder Four"
               />
@@ -351,7 +289,7 @@ const HomepageVThreePage = () => {
                 className="lg:gap-[15px] xl:gap-[17px] 2xl:gap-[19px] 3xl:gap-[23px] grid grid-cols-2 min-h-[auto] w-[49%]"
                 orientation="horizontal"
               >
-                <Column className="bg-white_A700 items-center lg:p-[21px] xl:p-[24px] 2xl:p-[27px] 3xl:p-[33px] shadow-bs w-[100%]">
+                <Column className="bg-white_A700 items-center lg:p-[21px] xl:p-[24px] 2xl:p-[27px] 3xl:p-[33px] shadow-bs2 w-[100%]">
                   <Img
                     src="images/img_blackbusiness.png"
                     className="lg:h-[117px] xl:h-[134px] 2xl:h-[151px] 3xl:h-[181px] lg:w-[116px] xl:w-[133px] 2xl:w-[150px] 3xl:w-[180px]"
@@ -364,9 +302,9 @@ const HomepageVThreePage = () => {
                     $299
                   </Text>
                 </Column>
-                <Column className="bg-white_A700 items-center lg:p-[21px] xl:p-[24px] 2xl:p-[27px] 3xl:p-[33px] shadow-bs w-[100%]">
+                <Column className="bg-white_A700 items-center lg:p-[21px] xl:p-[24px] 2xl:p-[27px] 3xl:p-[33px] shadow-bs2 w-[100%]">
                   <Img
-                    src="images/img_pink3tz3pbb1.png"
+                    src="images/img_placeholder.png"
                     className="lg:h-[117px] xl:h-[134px] 2xl:h-[151px] 3xl:h-[181px] lg:w-[116px] xl:w-[133px] 2xl:w-[150px] 3xl:w-[180px]"
                     alt="pink3TZ3PBBOne"
                   />
@@ -382,9 +320,9 @@ const HomepageVThreePage = () => {
                 className="lg:gap-[15px] xl:gap-[17px] 2xl:gap-[19px] 3xl:gap-[23px] grid grid-cols-2 min-h-[auto] w-[49%]"
                 orientation="horizontal"
               >
-                <Column className="bg-white_A700 items-center mb-[1px] lg:p-[21px] xl:p-[24px] 2xl:p-[27px] 3xl:p-[33px] shadow-bs w-[100%]">
+                <Column className="bg-white_A700 items-center mb-[1px] lg:p-[21px] xl:p-[24px] 2xl:p-[27px] 3xl:p-[33px] shadow-bs2 w-[100%]">
                   <Img
-                    src="images/img_graytshirtis.png"
+                    src="images/img_rectangle45_279X279.png"
                     className="lg:h-[117px] xl:h-[134px] 2xl:h-[151px] 3xl:h-[181px] lg:w-[116px] xl:w-[133px] 2xl:w-[150px] 3xl:w-[180px]"
                     alt="graytshirtis"
                   />
@@ -395,9 +333,9 @@ const HomepageVThreePage = () => {
                     $299
                   </Text>
                 </Column>
-                <Column className="bg-white_A700 items-center mt-[1px] lg:p-[21px] xl:p-[24px] 2xl:p-[27px] 3xl:p-[33px] shadow-bs w-[100%]">
+                <Column className="bg-white_A700 items-center mt-[1px] lg:p-[21px] xl:p-[24px] 2xl:p-[27px] 3xl:p-[33px] shadow-bs2 w-[100%]">
                   <Img
-                    src="images/img_redcheckereds.png"
+                    src="images/img_placeholder_4.png"
                     className="lg:h-[117px] xl:h-[134px] 2xl:h-[151px] 3xl:h-[181px] lg:w-[116px] xl:w-[133px] 2xl:w-[150px] 3xl:w-[180px]"
                     alt="redcheckereds"
                   />
@@ -415,7 +353,7 @@ const HomepageVThreePage = () => {
         <Row className="items-center lg:mt-[58px] xl:mt-[66px] 2xl:mt-[75px] 3xl:mt-[90px] w-[85%]">
           <Column
             className="bg-cover bg-repeat lg:p-[47px] xl:p-[54px] 2xl:p-[61px] 3xl:p-[73px] w-[49%]"
-            style={{ backgroundImage: "url('images/img_02.png')" }}
+            style={{ backgroundImage: "url('images/img_02_400X800.png')" }}
           >
             <Text className="font-normal leading-[normal] lg:my-[41px] xl:my-[47px] 2xl:my-[53px] 3xl:my-[63px] not-italic lg:text-[21px] xl:text-[24px] 2xl:text-[27px] 3xl:text-[32px] text-white_A700 w-[36%]">
               <span className="text-white_A700 font-poppins">
@@ -429,7 +367,7 @@ const HomepageVThreePage = () => {
           </Column>
           <Column
             className="bg-cover bg-repeat lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] lg:p-[46px] xl:p-[52px] 2xl:p-[59px] 3xl:p-[71px] w-[49%]"
-            style={{ backgroundImage: "url('images/img_03.png')" }}
+            style={{ backgroundImage: "url('images/img_03_400X801.png')" }}
           >
             <Text className="font-normal leading-[normal] lg:mb-[36px] xl:mb-[41px] 2xl:mb-[46px] 3xl:mb-[55px] lg:mt-[49px] xl:mt-[56px] 2xl:mt-[63px] 3xl:mt-[76px] not-italic lg:text-[21px] xl:text-[24px] 2xl:text-[27px] 3xl:text-[32px] text-white_A700 w-[35%]">
               <span className="text-white_A700 font-poppins">
@@ -448,7 +386,7 @@ const HomepageVThreePage = () => {
             </Text>
           </Column>
           <Row className="absolute bottom-[0] inset-x-[0] items-center mx-[auto] w-[85%]">
-            <Row className="bg-white_A700 items-center justify-end lg:p-[26px] xl:p-[30px] 2xl:p-[34px] 3xl:p-[41px] shadow-bs1 w-[24%]">
+            <Row className="bg-white_A700 items-center justify-end lg:p-[26px] xl:p-[30px] 2xl:p-[34px] 3xl:p-[41px] shadow-bs3 w-[24%]">
               <Img
                 src="images/img_music.svg"
                 className="lg:h-[18px] xl:h-[21px] 2xl:h-[23px] 3xl:h-[28px] w-[16%]"
@@ -465,7 +403,7 @@ const HomepageVThreePage = () => {
                 </Text>
               </Column>
             </Row>
-            <Row className="bg-white_A700 items-center justify-end lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] lg:p-[26px] xl:p-[30px] 2xl:p-[34px] 3xl:p-[41px] shadow-bs1 w-[24%]">
+            <Row className="bg-white_A700 items-center justify-end lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] lg:p-[26px] xl:p-[30px] 2xl:p-[34px] 3xl:p-[41px] shadow-bs3 w-[24%]">
               <Img
                 src="images/img_computer.svg"
                 className="lg:h-[20px] xl:h-[23px] 2xl:h-[26px] 3xl:h-[31px] w-[15%]"
@@ -482,7 +420,7 @@ const HomepageVThreePage = () => {
                 </Text>
               </Column>
             </Row>
-            <Row className="bg-white_A700 items-center justify-end lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] lg:p-[26px] xl:p-[30px] 2xl:p-[34px] 3xl:p-[41px] shadow-bs1 w-[24%]">
+            <Row className="bg-white_A700 items-center justify-end lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] lg:p-[26px] xl:p-[30px] 2xl:p-[34px] 3xl:p-[41px] shadow-bs3 w-[24%]">
               <Img
                 src="images/img_clock.svg"
                 className="lg:h-[27px] xl:h-[31px] 2xl:h-[35px] 3xl:h-[42px] w-[11%]"
@@ -499,7 +437,7 @@ const HomepageVThreePage = () => {
                 </Text>
               </Column>
             </Row>
-            <Row className="bg-white_A700 items-center justify-end lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] lg:p-[26px] xl:p-[30px] 2xl:p-[34px] 3xl:p-[41px] shadow-bs1 w-[24%]">
+            <Row className="bg-white_A700 items-center justify-end lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] lg:p-[26px] xl:p-[30px] 2xl:p-[34px] 3xl:p-[41px] shadow-bs3 w-[24%]">
               <Img
                 src="images/img_music_45X38.svg"
                 className="lg:h-[27px] xl:h-[31px] 2xl:h-[34px] 3xl:h-[41px] w-[13%]"
@@ -532,7 +470,7 @@ const HomepageVThreePage = () => {
         >
           <Column className="items-center pb-[4px] w-[100%]">
             <Img
-              src="images/img_placeholder_245X245.png"
+              src="images/img_placeholder_2.png"
               className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
               alt="placeholder Five"
             />
@@ -555,7 +493,7 @@ const HomepageVThreePage = () => {
           </Column>
           <Column className="items-center pb-[4px] w-[100%]">
             <Img
-              src="images/img_placeholder.png"
+              src="images/img_placeholder_5.png"
               className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
               alt="placeholder Six"
             />
@@ -578,7 +516,7 @@ const HomepageVThreePage = () => {
           </Column>
           <Column className="items-center pb-[4px] w-[100%]">
             <Img
-              src="images/img_placeholder_2.png"
+              src="images/img_placeholder_1.png"
               className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
               alt="placeholder Seven"
             />
@@ -600,7 +538,7 @@ const HomepageVThreePage = () => {
           </Column>
           <Column className="pb-[4px] w-[100%]">
             <Img
-              src="images/img_placeholder_3.png"
+              src="images/img_placeholder_6.png"
               className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
               alt="placeholder Eight"
             />
@@ -622,7 +560,7 @@ const HomepageVThreePage = () => {
           </Column>
           <Column className="items-center pb-[4px] w-[100%]">
             <Img
-              src="images/img_placeholder_1.png"
+              src="images/img_placeholder_245X245.png"
               className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
               alt="placeholder Nine"
             />
@@ -645,7 +583,7 @@ const HomepageVThreePage = () => {
           </Column>
           <Column className="items-center pb-[4px] w-[100%]">
             <Img
-              src="images/img_placeholder_4.png"
+              src="images/img_placeholder_3.png"
               className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
               alt="placeholder Ten"
             />
@@ -785,4 +723,4 @@ const HomepageVThreePage = () => {
   );
 };
 
-export default HomepageVThreePage;
+export default Home1Page;

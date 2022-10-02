@@ -6,7 +6,7 @@ import { Column, Row, Img, Text, Stack, Button, Line, List } from "components";
 const ProductDetailsPage = () => {
   const navigate = useNavigate();
 
-  function handleNavigate1() {
+  function handleNavigate3() {
     navigate("/cart");
   }
 
@@ -29,22 +29,18 @@ const ProductDetailsPage = () => {
               </Text>
               <Stack className="bg-gray_800 lg:h-[28px] xl:h-[33px] 2xl:h-[37px] 3xl:h-[44px] lg:ml-[231px] xl:ml-[264px] 2xl:ml-[297px] 3xl:ml-[357px] 2xl:px-[10px] 3xl:px-[12px] lg:px-[8px] xl:px-[9px] lg:w-[28px] xl:w-[32px] 2xl:w-[36px] 3xl:w-[43px]">
                 <Img
-                  src="images/img_search.svg"
+                  src="images/img_search_white_A700.svg"
                   className="absolute lg:h-[11px] xl:h-[13px] 2xl:h-[14px] 3xl:h-[17px] inset-[0] justify-center m-[auto] lg:w-[10px] xl:w-[12px] 2xl:w-[13px] 3xl:w-[16px]"
                   alt="search"
                 />
               </Stack>
             </Row>
             <Img
-              src="images/img_car.svg"
+              src="images/img_car_19X76.svg"
               className="lg:h-[12px] xl:h-[13px] 2xl:h-[15px] 3xl:h-[18px] lg:ml-[178px] xl:ml-[204px] 2xl:ml-[229px] 3xl:ml-[275px] w-[4%]"
               alt="car"
             />
-            <Button
-              className="font-bold lg:ml-[19px] xl:ml-[22px] 2xl:ml-[25px] 3xl:ml-[30px] 2xl:text-[10px] 3xl:text-[12px] lg:text-[8px] xl:text-[9px] text-center w-[6%]"
-              size="sm"
-              variant="FillGray800"
-            >
+            <Button className="font-bold lg:ml-[19px] xl:ml-[22px] 2xl:ml-[25px] 3xl:ml-[30px] 2xl:text-[10px] 3xl:text-[12px] lg:text-[8px] xl:text-[9px] text-center w-[6%]">
               Login
             </Button>
           </Row>
@@ -52,23 +48,23 @@ const ProductDetailsPage = () => {
         <Row className="items-center lg:mt-[18px] xl:mt-[21px] 2xl:mt-[24px] 3xl:mt-[28px] w-[85%]">
           <Column className="items-center w-[51%]">
             <Img
-              src="images/img_placeholder_523X800.png"
+              src="images/img_placeholder_107X107.png"
               className="lg:h-[306px] xl:h-[349px] 2xl:h-[393px] 3xl:h-[471px] w-[96%]"
               alt="placeholder"
             />
             <Row className="items-center justify-center lg:mt-[18px] xl:mt-[21px] 2xl:mt-[24px] 3xl:mt-[28px] w-[58%]">
               <Img
-                src="images/img_placeholder_1.png"
+                src="images/img_placeholder_245X245.png"
                 className="2xl:h-[103px] 3xl:h-[124px] lg:h-[80px] xl:h-[92px] w-[29%]"
                 alt="placeholder One"
               />
               <Img
-                src="images/img_placeholder_137X139.png"
+                src="images/img_placeholder_8.png"
                 className="2xl:h-[103px] 3xl:h-[124px] lg:h-[80px] xl:h-[92px] lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] w-[29%]"
                 alt="placeholder Two"
               />
               <Img
-                src="images/img_redcheckereds.png"
+                src="images/img_placeholder_4.png"
                 className="2xl:h-[103px] 3xl:h-[124px] lg:h-[80px] xl:h-[92px] lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] w-[29%]"
                 alt="placeholder Three"
               />
@@ -121,7 +117,6 @@ const ProductDetailsPage = () => {
                 </Column>
                 <Button
                   className="absolute font-medium lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-center w-[100%]"
-                  size="sm"
                   variant="OutlineBluegray100"
                 >
                   1
@@ -130,7 +125,7 @@ const ProductDetailsPage = () => {
             </Row>
             <Button
               className="2xl:mt-[42px] 3xl:mt-[50px] flex items-center justify-center lg:mt-[32px] text-center w-[31%] xl:mt-[37px]"
-              onClick={handleNavigate1}
+              onClick={handleNavigate3}
               rightIcon={
                 <Img
                   src="images/img_cart.svg"
@@ -138,8 +133,7 @@ const ProductDetailsPage = () => {
                   alt="cart"
                 />
               }
-              size="md"
-              variant="FillGray800"
+              size="lg"
             >
               <div className="common-pointer bg-transparent font-bold lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px]">
                 Add to Cart
@@ -166,7 +160,7 @@ const ProductDetailsPage = () => {
         >
           <Column className="items-center 2xl:my-[10px] 3xl:my-[12px] lg:my-[8px] xl:my-[9px] pb-[4px] w-[100%]">
             <Img
-              src="images/img_rectangle39_1.png"
+              src="images/img_rectangle39_7.png"
               className="lg:h-[146px] xl:h-[167px] 2xl:h-[188px] 3xl:h-[226px] lg:w-[145px] xl:w-[166px] 2xl:w-[187px] 3xl:w-[225px]"
               alt="placeholder Four"
             />
@@ -179,7 +173,7 @@ const ProductDetailsPage = () => {
           </Column>
           <Column className="items-center 2xl:my-[10px] 3xl:my-[12px] lg:my-[8px] xl:my-[9px] pb-[4px] w-[100%]">
             <Img
-              src="images/img_placeholder_250X250.png"
+              src="images/img_placeholder_9.png"
               className="lg:h-[146px] xl:h-[167px] 2xl:h-[188px] 3xl:h-[226px] lg:w-[145px] xl:w-[166px] 2xl:w-[187px] 3xl:w-[225px]"
               alt="placeholder Five"
             />
@@ -192,7 +186,7 @@ const ProductDetailsPage = () => {
           </Column>
           <Column className="items-center 2xl:my-[10px] 3xl:my-[12px] lg:my-[8px] xl:my-[9px] pb-[4px] w-[100%]">
             <Img
-              src="images/img_placeholder_3.png"
+              src="images/img_placeholder_6.png"
               className="lg:h-[146px] xl:h-[167px] 2xl:h-[188px] 3xl:h-[226px] lg:w-[145px] xl:w-[166px] 2xl:w-[187px] 3xl:w-[225px]"
               alt="placeholder Six"
             />
@@ -205,7 +199,7 @@ const ProductDetailsPage = () => {
           </Column>
           <Column className="items-center 2xl:my-[10px] 3xl:my-[12px] lg:my-[8px] xl:my-[9px] pb-[4px] w-[100%]">
             <Img
-              src="images/img_placeholder_5.png"
+              src="images/img_placeholder_7.png"
               className="lg:h-[146px] xl:h-[167px] 2xl:h-[188px] 3xl:h-[226px] lg:w-[145px] xl:w-[166px] 2xl:w-[187px] 3xl:w-[225px]"
               alt="placeholder Seven"
             />
