@@ -18,10 +18,10 @@ const CategorieswithSidebarPage = () => {
   const navigate = useNavigate();
 
   function handleNavigate2() {
-    navigate("/productlist");
+    navigate("/ads");
   }
   function handleNavigate3() {
-    navigate("/productlist");
+    navigate("/ads");
   }
 
   return (

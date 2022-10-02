@@ -2,8 +2,6 @@ import React from "react";
 
 import { postList } from "service/api";
 import { useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import _ from "lodash";
 import {
   Column,
@@ -20,16 +18,27 @@ import {
   Slider,
 } from "components";
 
-const ProductListPage = () => {
+const AdsPage = () => {
   const [apiData, setapiData] = React.useState();
   const [apiData1, setapiData1] = React.useState();
   const [apiData2, setapiData2] = React.useState();
   const navigate = useNavigate();
   React.useEffect(() => {
-    callApi2();
+    callApi();
   }, []);
 
   function callApi() {
+    const req = {};
+
+    postList(req)
+      .then((res) => {
+        setapiData(res);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }
+  function callApi1() {
     const req = { data: {} };
     _.set(
       req.data,
@@ -38,43 +47,31 @@ const ProductListPage = () => {
     );
     postList(req)
       .then((res) => {
-        setapiData(res);
-
-        navigate("/", { state: { ad: apiData1?.response } });
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }
-  function callApi1() {
-    const req = { data: {} };
-    _.set(req.data, "options.populate", apiData2?.response);
-    postList(req)
-      .then((res) => {
         setapiData1(res);
 
-        localStorage.setItem("ads", JSON.stringify(res?.response));
-
-        navigate("/", { state: { ads: apiData2?.response } });
+        //TODO: You had integrated navigation action, since you've not selected the target page,
+        // you will have to update navigation code manually.
+        navigate("", { state: { ad: apiData2?.response } });
       })
       .catch((err) => {
         console.error(err);
       });
   }
   function callApi2() {
-    const req = {};
-
+    const req = { data: {} };
+    _.set(req.data, "options.populate", undefined?.response);
     postList(req)
       .then((res) => {
         setapiData2(res);
 
-        localStorage.setItem("pro", JSON.stringify(res?.response));
+        localStorage.setItem("ads", JSON.stringify(res?.response));
 
-        navigate("/", { state: { pro: res?.response } });
+        //TODO: You had integrated navigation action, since you've not selected the target page,
+        // you will have to update navigation code manually.
+        navigate("", { state: { ads: undefined?.response } });
       })
       .catch((err) => {
         console.error(err);
-        toast.error("Some error");
       });
   }
 
@@ -381,29 +378,28 @@ const ProductListPage = () => {
             <Grid
               className="common-pointer lg:gap-[18px] xl:gap-[21px] 2xl:gap-[24px] 3xl:gap-[28px] grid grid-cols-5 lg:mt-[18px] xl:mt-[21px] 2xl:mt-[24px] 3xl:mt-[28px] w-[100%]"
               onClick={() => {
-                callApi1();
+                callApi2();
               }}
             >
-              {apiData?.response?.map((apiDataResponseEle, index) => {
+              {apiData1?.response?.map((apiData1ResponseEle, index) => {
                 return (
-                  <React.Fragment key={`apiDataResponseEle${index}`}>
+                  <React.Fragment key={`apiData1ResponseEle${index}`}>
                     <Column
                       className="common-pointer items-center pb-[4px] w-[100%]"
                       onClick={() => {
-                        callApi();
+                        callApi1();
                       }}
                     >
                       <Img
-                        src="images/img_placeholder_4.png"
+                        src={apiData?.response}
                         className="lg:h-[143px] xl:h-[164px] 2xl:h-[184px] 3xl:h-[221px] lg:w-[142px] xl:w-[163px] 2xl:w-[183px] 3xl:w-[220px]"
                         alt="placeholder"
                       />
                       <Text className="font-medium leading-[normal] lg:mt-[14px] xl:mt-[16px] 2xl:mt-[18px] 3xl:mt-[22px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] text-center text-gray_800 w-[66%]">
-                        Green <br />
-                        Warm Jacket
+                        {apiData?.response}
                       </Text>
                       <Text className="font-medium lg:mt-[12px] xl:mt-[14px] 2xl:mt-[16px] 3xl:mt-[19px] lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-gray_500 w-[auto]">
-                        $299
+                        {apiData?.response}
                       </Text>
                     </Column>
                   </React.Fragment>
@@ -590,10 +586,8 @@ const ProductListPage = () => {
           </Column>
         </footer>
       </Column>
-
-      <ToastContainer />
     </>
   );
 };
 
-export default ProductListPage;
+export default AdsPage;

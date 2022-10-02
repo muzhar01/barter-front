@@ -19,8 +19,8 @@ import {
 const HomepageVTwoPage = () => {
   const navigate = useNavigate();
 
-  function handleNavigate6() {
-    navigate("/homepagevthree");
+  function handleNavigate4() {
+    navigate("/home1");
   }
 
   const sliderRef = React.useRef();
@@ -30,7 +30,7 @@ const HomepageVTwoPage = () => {
     <>
       <Column
         className="common-pointer bg-white_A700 font-poppins items-center mx-[auto] w-[100%]"
-        onClick={handleNavigate6}
+        onClick={handleNavigate4}
       >
         <header className="w-[100%]">
           <Column className="bg-white_A700 items-center lg:p-[14px] xl:p-[16px] 2xl:p-[18px] 3xl:p-[21px] w-[100%]">

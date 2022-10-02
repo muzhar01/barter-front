@@ -12,10 +12,7 @@ const Home = () => {
       </p>
       <ul>
         <li>
-          <Link to="/completed">Completed</Link>
-        </li>
-        <li>
-          <Link to="/homepagevthree">HomepageVThree</Link>
+          <Link to="/home1">Home1</Link>
         </li>
         <li>
           <Link to="/productdetails">ProductDetails</Link>
@@ -27,16 +24,10 @@ const Home = () => {
           <Link to="/cart">Cart</Link>
         </li>
         <li>
-          <Link to="/">HomepageVOne</Link>
-        </li>
-        <li>
-          <Link to="/checkout">Checkout</Link>
-        </li>
-        <li>
           <Link to="/homepagevtwo">HomepageVTwo</Link>
         </li>
         <li>
-          <Link to="/productlist">ProductList</Link>
+          <Link to="/ads">Ads</Link>
         </li>
       </ul>
     </div>

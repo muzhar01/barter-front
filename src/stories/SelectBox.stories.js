@@ -18,9 +18,4 @@ export default {
 
 export const SampleSelectbox = (args) => <SelectBox {...args} />;
 
-SampleSelectbox.args = {
-  placeholder: "Select",
-  variant: "OutlineBluegray100",
-  size: "sm",
-  className: "w-[300px]",
-};
+SampleSelectbox.args = { placeholder: "Select", className: "w-[300px]" };

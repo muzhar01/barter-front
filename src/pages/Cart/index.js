@@ -6,8 +6,10 @@ import { Column, Row, Img, Text, Button, Line, List, Stack } from "components";
 const CartPage = () => {
   const navigate = useNavigate();
 
-  function handleNavigate9() {
-    navigate("/checkout");
+  function handleNavigate5() {
+    //TODO: You had integrated navigation action, since you've not selected the target page,
+    // you will have to update navigation code manually.
+    navigate("");
   }
 
   return (
@@ -227,7 +229,7 @@ const CartPage = () => {
             </Button>
             <Button
               className="common-pointer font-medium lg:ml-[18px] xl:ml-[21px] 2xl:ml-[24px] 3xl:ml-[28px] lg:text-[10px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-center w-[42%]"
-              onClick={handleNavigate9}
+              onClick={handleNavigate5}
               size="sm"
               variant="FillGray800"
             >
